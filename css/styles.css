@@ -1,0 +1,273 @@
+/* FONTS:
+Headings: Work Sans (sans serif)
+Body: Merriweather (serif) */
+
+/* COLOURS:
+Ref: https://color.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.48828182115766083,0.013612449956360129,1,0.19953300165134202,0.012387329460287717,0.91,0.036387550043639916,0.09611296892434906,1,0.012387329460287717,0.3042358934196418,0.91,0.013612449956360129,0.5939008286677046,1&swatchOrder=0,1,2,3,4
+BG: #D6ECEE
+Secondary BG and Accent: #ffffff
+Text: #000000
+Hover: #B6CBD6
+Nav Hover: #438b7e */
+
+/* Importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap");
+
+/* Ensuring no default padding exists */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Stopping side scroll */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Making cursor (selectable version) available on hover */
+li:hover {
+  cursor: pointer;
+}
+
+/* Setting line height and font size per assignment criteria (desktop) */
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Styling nav */
+nav {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+#p-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+/* Styling social logos in footer */
+#socials {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Styling control buttons */
+#controls {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Changing hover color for buttons */
+#controls li:hover {
+  color: #438b7e;
+}
+
+/* Styling masthead (giving bg img) */
+#masthead {
+  background-image: url("../img/energy-mh.jpg");
+  background-size: cover;
+  height: 250px;
+  width: auto;
+  background-position: 80% 60%;
+}
+
+/* Setting background color, center aligning, producing grid to divide masthead, main content, and footer */
+body {
+  background-color: #d6ecee;
+  text-align: center;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "masthead" "main" "footer";
+  grid-template-rows: 2fr 3fr 1fr;
+}
+
+/* Styling masthead */
+header {
+  grid-area: "masthead";
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+}
+
+/* Styling main content */
+main {
+  grid-area: "main";
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  padding: 3rem;
+}
+
+/* Styling footer */
+footer {
+  margin-bottom: 2rem;
+  grid-area: "footer";
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  padding-top: 2rem;
+}
+
+/* Styling h1 in masthead */
+#slogan {
+  color: #000000;
+  font-size: 3rem;
+  text-shadow: 5px 5px 10px #ffffff;
+}
+
+#slogan span {
+  padding: 0.5rem;
+}
+
+/* Styling buttons */
+button {
+  padding: 0.75rem;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background-color: #ffff;
+  border: 1px solid #000000;
+}
+
+/* Styling links */
+a {
+  color: #3e586f;
+}
+
+a:hover {
+  color: #ffff;
+}
+
+footer a:hover {
+  color: #b6cbd6;
+}
+
+.nav-hov:hover {
+  background-color: #b6cbd6;
+}
+
+.nav-hov a:hover {
+  color: #ffff;
+}
+
+#active {
+  background-color: #b6cbd6;
+  color: #ffffff;
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+}
+
+/* More control button styling */
+#controls i {
+  padding: 2rem;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+
+/* Styling info-content div (body text in dc) */
+#info-content {
+  display: flex;
+  flex-direction: row;
+  align-self: baseline;
+  justify-content: baseline;
+  align-items: center;
+  text-align: left;
+  gap: 2rem;
+  background-color: #ffffff;
+}
+
+/* Styling heading above dc */
+#information h1 {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+/* Adjusting img size in dc */
+#info-content img {
+  max-width: 30%;
+}
+
+/* Adjusting text in dc */
+#info-content p {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* MEDIA QUERIES */
+/* I played around with the layout and made minor styling adjustments on the way for certain elements that looked silly in smaller views. The primary change here is a horizontal stacked layout from 1388px and above to a single column layout under 1388px */
+@media only screen and (max-width: 1388px) {
+  #info-content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+  }
+
+  p {
+    line-height: 1.4;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  #info-content img {
+    max-width: 50%;
+    padding-top: 3rem;
+    gap: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0;
+  }
+
+  #info-content img {
+    padding-bottom: 0;
+  }
+
+  #info-content {
+    padding-bottom: 0;
+    gap: 0;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  #slogan {
+    font-size: 2rem;
+  }
+
+  #active {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  #active {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}

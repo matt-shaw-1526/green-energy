@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Title -->
+    <title>Green Energy - Midterm Assignment</title>
+  </head>
+  <body>
+    <header>
+      <!-- Creating a div for masthead in header -->
+      <div id="masthead">
+        <nav>
+          <ul id="p-nav">
+            <button class="nav-hov">
+              <li><a href="#">Home</a></li>
+            </button>
+            <button class="nav-hov">
+              <li><a href="#">About</a></li>
+            </button>
+            <button class="nav-hov">
+              <li><a href="#">Contact</a></li>
+            </button>
+            <button class="nav-hov">
+              <li><a href="#">Blog</a></li>
+            </button>
+          </ul>
+        </nav>
+        <!-- Adding slogan as h1 with id -->
+        <h1 id="slogan">
+          <span>How can you contribute to green energy affordably?</span>
+        </h1>
+      </div>
+    </header>
+    <main>
+      <!-- Button controls here -->
+      <ul id="controls">
+        <!-- Selected button = active id -->
+        <li id="active" data-page-id="page-1">
+          Water<i class="fa-solid fa-droplet fa-2x"></i>
+        </li>
+        <li data-page-id="page-2">
+          Wind<i class="fa-solid fa-wind fa-2x"></i>
+        </li>
+        <li data-page-id="page-3">
+          Solar<i class="fa-solid fa-sun fa-2x"></i>
+        </li>
+      </ul>
+      <!-- Dynamic content will load in this div -->
+      <div id="dynamic-content">
+        <!-- Content below loads on page1 load -->
+        <div id="information">
+          <h1>Hydro Power</h1>
+          <div id="info-content">
+            <img src="./img/hydro.jpg" alt="A hydroelectric dam." />
+            <p>
+              This type of green energy works by harnessing the energy produced
+              by bodies of water. This includes rivers, streams, ocean tides, or
+              dams. Hydroelectricity is reliable because its prices do not
+              depend on unpredictable changes in fuel costs. The easiest way for
+              an individual to access this form of green energy on an average
+              budget is to relocate to an area that is next to a large body of
+              water. Hundreds of years ago, settlers would use water wheels that
+              would act as turbines to mechanically power various devices.
+              Today, it makes the most sense to move to an area where
+              electricity grid is powered by a localized body of water. This way
+              you avoid upfront costs (i.e. setting up a dam or a turbine),
+              while helping the environment!
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer socials here -->
+      <ul id="socials">
+        <li>
+          <a href="https://instagram.com"
+            ><span><i class="fa-brands fa-instagram fa-3x"></i></span
+          ></a>
+        </li>
+        <li>
+          <a href="https://twitter.com"
+            ><span><i class="fa-brands fa-twitter fa-3x"></i></span
+          ></a>
+        </li>
+        <li>
+          <a href="https://linkedin.com"
+            ><span><i class="fa-brands fa-linkedin fa-3x"></i></span
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/22ff18bc21.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
